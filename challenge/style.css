@@ -1,0 +1,108 @@
+@import "status-bar.css";
+@import "no-mobile.css";
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.screen-friends {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+.nav__friends {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__friends > span {
+  font-weight: 800;
+  font-size: 20px;
+  padding-left: 15px;
+}
+.nav__search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* margin: 5px 15px; */
+  align-items: center;
+  /* transition: all 0.5s ease-in-out; */
+}
+.nav__search i {
+  position: absolute;
+  left: 7%;
+  top: 20%;
+  opacity: 0.4;
+  transition: all 0.5s ease-in-out;
+}
+input {
+  width: 80%;
+  background-color: #f2f2f3;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 5px 20px;
+  transition: all 0.5s ease-in-out;
+}
+.nav__search:focus-within input {
+  width: 100%;
+  outline: none;
+}
+.nav__search:focus-within i {
+  display: none;
+}
+/* input animation 넣기 */
+.friends__list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+.friends__lists {
+  display: flex;
+  margin: 10px;
+}
+.friends__list button {
+  background-color: white;
+  /* padding: 5px; */
+  border: none;
+  /* transition: all 0.3 ease-in-out; */
+}
+.friends__list button:focus {
+  background-color: rgba(214, 37, 214, 0.4);
+  border: 1px solid rgba(10, 0, 10, 0.4);
+  border-radius: 15px;
+  outline: none;
+  padding: 50px;
+}
+/* focus : background color */
+.friends__text {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.friends__text span {
+  font-weight: 600;
+}
+.friends__text span:last-child {
+  opacity: 0.5;
+}
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+  #no-mobile {
+    display: none;
+  }
+}
